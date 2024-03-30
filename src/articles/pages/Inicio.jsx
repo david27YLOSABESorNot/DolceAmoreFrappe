@@ -18,7 +18,7 @@ export const Inicio = () => {
 
             <p className="title-section">Sobre Nosotros</p>
             <div className="contain-about-us">
-              <img src="/designimages/frappeOreo.avif" alt="imagen nosotros" />
+              <img src="/designImages/frappeOreo.avif" alt="imagen nosotros" />
 
               <div className="about-us-info">
                 <p>
@@ -106,6 +106,39 @@ export const Inicio = () => {
 
           </div>
 
+        </section>
+
+        <section className="form ">
+          <div className="contain">
+            <p className="title-section">Contactanos</p>
+
+            <div className="contain-contact">
+
+              <div className="side-left">
+
+                <div className="parraf-adress">
+                  <p className="adress">Estamos ubicados en la av. Independencia, en la localidad de Laguna de Lagarto. Frente al jardin de niños, Jose Mariano Monterde. Abrimos de viernes a domingo, de 4pm a 12 de la noche.</p>
+                  <p className="numbers">Contactanos al whatsapp
+                    2881231679
+                    2881894958
+                    </p>                  
+                </div>
+
+              </div>
+              <div className="side-right">
+                <form action="" className="form-contact">
+                  <div className="camp-adjust">
+                    <input type="text" placeholder="Nombre" />
+                    <input type="number" placeholder="Telefono" />
+                  </div>
+                  <input type="email" placeholder="Email" />
+                  <textarea  placeholder="mensaje"></textarea>
+                  <input type="submit" value='Enviar' />
+                </form>
+              </div>
+            </div>
+
+          </div>
         </section>
     </>
   )
