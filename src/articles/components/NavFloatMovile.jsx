@@ -7,7 +7,7 @@ export const NavFloatMovile = ({active, setActive}) => {
 
         <div className="contain-links-float">
 
-            <img onClick={() => setActive(false)} className="close-icon" src="/public/icons/close.svg" alt="icon close" />
+            <img onClick={() => setActive(false)} className="close-icon" src="/icons/close.svg" alt="icon close" />
             <div className='adjust-float'>
                 <nav >
                     

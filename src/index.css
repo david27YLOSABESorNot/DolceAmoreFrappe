@@ -288,7 +288,7 @@ img{
 }
 
 .header{
-  background-image: url(public/designImages/heading.jpg);
+  background-image: url(/designImages/heading.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
