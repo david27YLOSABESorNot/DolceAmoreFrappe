@@ -18,7 +18,7 @@ export const Inicio = () => {
 
             <p className="title-section">Sobre Nosotros</p>
             <div className="contain-about-us">
-              <img src="/public/designimages/frappeOreo.avif" alt="imagen nosotros" />
+              <img src="/designimages/frappeOreo.avif" alt="imagen nosotros" />
 
               <div className="about-us-info">
                 <p>
@@ -44,7 +44,7 @@ export const Inicio = () => {
                 <div className="block-one blocks">
 
                   <div className="img-one box " >
-                    <img src="/public/designImages/hamburguesaPapas.avif" alt="Hamburguesa con papas" />
+                    <img src="/designImages/hamburguesaPapas.avif" alt="Hamburguesa con papas" />
 
                     <div className="shadow">
                      <p className="title-box">Hamburguesas</p>     
@@ -53,21 +53,21 @@ export const Inicio = () => {
                   </div>
 
                   <div className="img-two box">
-                    <img  src="/public/designImages/AlitasImagen.avif" alt="Imagen alitas" />
+                    <img  src="/designImages/AlitasImagen.avif" alt="Imagen alitas" />
                     <div className="shadow">
                       <p className="title-box">Alitas</p>     
                     </div>
                   </div>
 
                   <div className="img-twree box">
-                    <img  src="/public/designImages/tacosPastor.avif" alt="Tacos pastor" />
+                    <img  src="/designImages/tacosPastor.avif" alt="Tacos pastor" />
                     <div className="shadow">
                       <p className="title-box">Tacos</p>     
                     </div>
                   </div>
 
                   <div className="img-four box">
-                    <img  src="/public/designImages/tortasPastor.avif" alt="Torta pastor" />
+                    <img  src="/designImages/tortasPastor.avif" alt="Torta pastor" />
                     <div className="shadow ">
                       <p className="title-box">Tortas</p>     
                     </div>
@@ -78,7 +78,7 @@ export const Inicio = () => {
                 <div className="block-two blocks">
                   
                   <div className="img-one-two box">
-                    <img src="/public/designImages/micheladas.avif" alt="micheladas imagenes" />
+                    <img src="/designImages/micheladas.avif" alt="micheladas imagenes" />
 
                     <div className="shadow ">
                       <p className="title-box">Micheladas</p>     
@@ -86,14 +86,14 @@ export const Inicio = () => {
                   </div>
 
                   <div className="img-two-two box">
-                    <img src="/public/designImages/frappeOreo.avif" alt="Imagen frappe" />
+                    <img src="/designImages/frappeOreo.avif" alt="Imagen frappe" />
                     <div className="shadow ">
                       <p className="title-box">Frappe's</p>     
                     </div>
                   </div>
 
                   <div className="box">
-                    <img src="/public/designImages/bebidasImagenes.avif" alt="imagen bebidas" />
+                    <img src="/designImages/bebidasImagenes.avif" alt="imagen bebidas" />
                     <div className="shadow ">
                       <p className="title-box">Drinks</p>     
                     </div>

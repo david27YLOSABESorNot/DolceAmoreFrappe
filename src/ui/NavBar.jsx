@@ -46,21 +46,21 @@ export const NavBar = () => {
                                 <div className="links-adjust">
                                     <div className="links-desk">
                                         <NavLink to="snacks">Snacks</NavLink>
-                                        <img src="/public/icons/iconoHamburguesa.png" alt="icono snacks" />
+                                        <img src="/icons/iconoHamburguesa.png" alt="icono snacks" />
                                     </div>
                                     <div className="links-desk">
                                         <NavLink to="bebidas">Bebidas</NavLink>
-                                        <img src="/public/icons/malteada.png" alt="icono malteada" />
+                                        <img src="/icons/malteada.png" alt="icono malteada" />
                                     </div>                                
                                 </div>
 
                             </div>
 
                             <NavLink to="carrito">
-                                <img  className='car' src="/public/icons/shoppingCart.png" alt="icono carrito" />                                
+                                <img  className='car' src="/icons/shoppingCart.png" alt="icono carrito" />                                
                             </NavLink>
 
-                            <img  onClick={() => setActive(true)} className="menu" src="/public/icons/iconoHamburguesa.png" alt="icono hamburguesa" />
+                            <img  onClick={() => setActive(true)} className="menu" src="/icons/iconoHamburguesa.png" alt="icono hamburguesa" />
 
 
                         </div>
