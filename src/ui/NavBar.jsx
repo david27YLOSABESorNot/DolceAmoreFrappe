@@ -53,6 +53,7 @@ export const NavBar = () => {
                                         <img src="/icons/malteada.png" alt="icono malteada" />
                                     </div>                                
                                 </div>
+                                
 
                             </div>
 
@@ -61,6 +62,10 @@ export const NavBar = () => {
                             </NavLink>
 
                             <img  onClick={() => setActive(true)} className="menu" src="/icons/iconoHamburguesa.png" alt="icono hamburguesa" />
+
+                            <NavLink to={'login'} className='login-text'>
+                                 Login
+                            </NavLink>
 
 
                         </div>

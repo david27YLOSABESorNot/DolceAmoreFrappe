@@ -4,10 +4,10 @@
 
 export const Inicio = () => {
   return (
-    <>
+    <div className="global-content">
         <header className="header">
           <div className="title-page">
-            <h1>Dolce Apmore Frappe</h1>
+            <h1 className="title-logo">Dolce Apmore Frappe</h1>
             <p>El sazon de una verdadera mujer</p>
           </div>
         </header>
@@ -140,6 +140,6 @@ export const Inicio = () => {
 
           </div>
         </section>
-    </>
+    </div>
   )
 }

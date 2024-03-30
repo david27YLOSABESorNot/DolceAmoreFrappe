@@ -266,12 +266,7 @@ img{
 
 }
 
-.footer{
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
+
 
 @media (min-width: 768px){
   .title-footer{
@@ -315,7 +310,7 @@ img{
   z-index: +3;
 }
 
-.title-page h1{
+.title-logo{
 
   color: white;
   font-size: 4rem;
@@ -459,7 +454,6 @@ img{
 
 .form{
   background-color: #CAC7B2;
-  margin-bottom: 20rem;;
   padding-top: 10rem;
   padding-bottom: 5rem;
 }
@@ -523,6 +517,16 @@ img{
   margin: 4rem auto;
 }
 
+.global-content{
+  background-color: var(--terciary-background);
+}
+
+.login-text{
+  display: none;
+}
+
+
+
 @media (min-width: 768px){
 
   .contain-contact{
@@ -532,6 +536,12 @@ img{
     align-items: center;
     gap: 3rem;
   }
+  .login-text{
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
 
   .camp-adjust{
     display: flex;
@@ -584,3 +594,63 @@ img{
   }
 }
 
+
+.contain-form-global{
+  background-image: url(/designImages/FondoLogin.avif);
+  background-position: center center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  justify-content:center ;
+  align-items: center;
+}
+.contain-form-global::after{
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.775);
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+}
+
+.fields{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.fields label{
+  margin-bottom: .7rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.fields input{
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border:  none;
+}
+
+.form-login{
+  background-color: rgba(255, 255, 255, 0.392);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.contain-form{
+  z-index: +5;
+}
+
+.form-login input[type="submit"]{
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: var(--green-color);
+  border: none;
+}
