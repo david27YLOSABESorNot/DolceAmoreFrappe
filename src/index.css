@@ -647,10 +647,19 @@ img{
   z-index: +5;
 }
 
-.form-login input[type="submit"]{
+.btn-registrar{
   width: 100%;
   padding: 1rem;
   font-size: 2rem;
   background-color: var(--green-color);
   border: none;
+}
+
+
+.alerts{
+  text-align: center;
+  color: white;
+  background: rgb(207, 11, 11);
+  padding: 1rem;
+  font-size: 1.5rem;
 }
