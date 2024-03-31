@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {NavLink, useLocation} from 'react-router-dom' 
 import { NavFloatMovile } from '../articles/components'
+import { UserContext } from '../context/userContext';
 
 export const NavBar = () => {
 
     const [active, setActive] = useState(false);
     const [navBar, setNavBar] = useState(false);
-
+    const {infoUser, logged} = useContext(UserContext);
     const location = useLocation();
+
+    const userName = infoUser.nombre;
+
+   
 
     const changeBackground = () => {
         if(window.scrollY >= 150){
@@ -18,6 +23,7 @@ export const NavBar = () => {
         }
     }
 
+  
     window.addEventListener('scroll', changeBackground)
 
     return (
@@ -40,7 +46,7 @@ export const NavBar = () => {
               
 
                         <div className='icons-links'>
-                            <h2>Alfredo</h2>
+                            <h2>{userName ? userName : ''}</h2>
                             <div className='contain-link-desk'>
 
                                 <div className="links-adjust">
@@ -64,7 +70,7 @@ export const NavBar = () => {
                             <img  onClick={() => setActive(true)} className="menu" src="/icons/iconoHamburguesa.png" alt="icono hamburguesa" />
 
                             <NavLink to={'login'} className='login-text'>
-                                 Login
+                                 {logged ? 'Logout' : 'Login'}
                             </NavLink>
 
 

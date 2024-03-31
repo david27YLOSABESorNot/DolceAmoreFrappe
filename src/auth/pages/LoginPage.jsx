@@ -1,16 +1,28 @@
+import { useContext } from "react";
 import { useForm } from "../../hook/useForm"
+import { UserContext } from "../../context/userContext";
 
 
 
 
 export const LoginPage = () => {
 
-  const {onInputChange, validateForm, alertEmail, alertEmpty, nombre, apellidos, email, password} = useForm({
+ 
+
+  const {onInputChange, validateForm, alertEmail, alertEmpty, nameLarge, nombre, apellidos, email, password} = useForm({
     nombre: "",
     apellidos: "",
     email: "",
     password: ""
-  })
+  });
+
+  const {setInfoUser, setLogged} = useContext(UserContext);
+
+
+
+
+
+
   return (
     <div className="contain-form-global">
         <div className="contain-form">
@@ -18,6 +30,7 @@ export const LoginPage = () => {
           <form className="form-login" action="">
             {alertEmpty && <p className="alerts">Los Campos No Pueden Estar Vacios</p> }
             {alertEmail && <p className="alerts">El Email No Es Valido</p>}
+            {nameLarge && <p className="alerts">El nombre es demsaiado largo</p>}
             <div className="fields">
               <label htmlFor="nombre">Nombre: </label>
               <input id="nombre" value={nombre} onChange={e => onInputChange(e) } name="nombre" type="text" placeholder="Nombre" />
@@ -36,7 +49,7 @@ export const LoginPage = () => {
             </div>
 
             <button
-              onClick={(e) => validateForm(e) }
+              onClick={(e) => validateForm(e, setInfoUser, setLogged) }
               className="btn-registrar">
               Registrarse
             </button>
