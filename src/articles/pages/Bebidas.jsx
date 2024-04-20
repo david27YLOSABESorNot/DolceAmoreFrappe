@@ -5,7 +5,9 @@ import React from 'react'
 export const Bebidas = () => {
   return (
     <div>
-        <h2>Desde bebidas</h2>
+      <div className="containImageSection sectionDrinks">
+          <h2 className='titleSection'>Bebidas</h2>
+        </div>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import {NavLink, useLocation} from 'react-router-dom' 
+import {NavLink, useLocation, useNavigate} from 'react-router-dom' 
 import { NavFloatMovile } from '../articles/components'
 import { UserContext } from '../context/userContext';
 
@@ -9,10 +9,8 @@ export const NavBar = () => {
     const [navBar, setNavBar] = useState(false);
     const {infoUser, logged} = useContext(UserContext);
     const location = useLocation();
-
     const userName = infoUser.nombre;
 
-   
 
     const changeBackground = () => {
         if(window.scrollY >= 150){
@@ -23,7 +21,6 @@ export const NavBar = () => {
         }
     }
 
-  
     window.addEventListener('scroll', changeBackground)
 
     return (

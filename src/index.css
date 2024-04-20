@@ -40,6 +40,12 @@ a{
   margin: 0 auto;
 }
 
+.contain-products{
+  max-width: 120rem;
+  width: 98%;
+  margin: 0 auto;
+}
+
 img{
   width: 100%;
   padding: 0;
@@ -136,6 +142,9 @@ img{
   opacity: 0;
   z-index: +5;
 }
+
+
+
 
 @media (min-width: 768px){
   .contain-nav-float{
@@ -662,4 +671,92 @@ img{
   background: rgb(207, 11, 11);
   padding: 1rem;
   font-size: 1.5rem;
+}
+
+.link-active{
+  color: var(--green-color)
+}
+
+.sectionSnack{
+  background-image: url(/public/designImages/snacksHeadingPapas.avif);
+}
+.sectionDrinks{
+  background-image: url(/public/designImages/FondoDrinks.jpg);
+}
+.containImageSection{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 30rem;
+  position: relative;
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+.containImageSection::before{
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.505);
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  
+
+}
+
+.titleSection{
+  font-size: 4rem;
+  font-family: var(--terciary-font);
+  z-index: +6;
+
+}
+.containCardsProducts{
+    display: grid;
+
+}
+
+@media(min-width: 768px){
+
+  .titleSection{
+    font-size: 8rem;
+  }
+
+  .containImageSection{
+    height: 40rem;
+  }
+
+  .containCardsProducts{
+    
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 5rem;
+    padding-bottom: 5rem;;
+  }
+}
+
+.target-contain{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+}
+
+.info-target{
+  background-color: white;;
+}
+
+
+.contain-sections{
+  background-color: #D7D9D9;
+}
+
+.info-target h3{
+  font-family: var(--principal-font);
+  font-weight: bold;
+  font-size: 3rem;
 }
