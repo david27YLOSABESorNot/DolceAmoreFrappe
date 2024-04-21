@@ -1,12 +1,13 @@
 import { useEffect, useReducer, useState } from "react";
 import { UserContext } from "./userContext"
-import { authReducer } from "./authReducer";
+
 
 
 
 
 export const UserProvider = ({children}) => {
 
+    
     const [infoUser, setInfoUser] = useState(JSON.parse(localStorage.getItem('infoUser')) || {});
     const [logged, setLogged] = useState(JSON.parse(localStorage.getItem('logged')) || false);
 
@@ -18,7 +19,7 @@ export const UserProvider = ({children}) => {
 
     useEffect(() => {
         localStorage.setItem('logged', JSON.stringify(logged));
-    }, [logged])
+    }, [logged]);
 
 
     

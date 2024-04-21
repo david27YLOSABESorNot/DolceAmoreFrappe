@@ -7,7 +7,7 @@ export const NavBar = () => {
 
     const [active, setActive] = useState(false);
     const [navBar, setNavBar] = useState(false);
-    const {infoUser, logged} = useContext(UserContext);
+    const {infoUser, logged, setLogged} = useContext(UserContext);
     const location = useLocation();
     const userName = infoUser.nombre;
 
@@ -19,6 +19,11 @@ export const NavBar = () => {
         else{
             setNavBar(false);
         }
+    }
+
+    const onLogout = () => {
+        setLogged(false);
+        localStorage.removeItem('infoUser');
     }
 
     window.addEventListener('scroll', changeBackground)
@@ -43,7 +48,7 @@ export const NavBar = () => {
               
 
                         <div className='icons-links'>
-                            <h2>{userName ? userName : ''}</h2>
+                            <h2 className="user-name-desk">{userName ? userName : ''}</h2>
                             <div className='contain-link-desk'>
 
                                 <div className="links-adjust">
@@ -64,11 +69,23 @@ export const NavBar = () => {
                                 <img  className='car' src="/icons/shoppingCart.png" alt="icono carrito" />                                
                             </NavLink>
 
+                            {
+                                logged ? (
+                                    <button onClick={onLogout} className='button-login'>
+                                        Logout
+                                    </button>
+                                ):
+                                (
+                                    <NavLink to={'login'} className='login-text'>
+                                        Login
+                                    </NavLink>
+                                )
+                            }
+
                             <img  onClick={() => setActive(true)} className="menu" src="/icons/iconoHamburguesa.png" alt="icono hamburguesa" />
 
-                            <NavLink to={'login'} className='login-text'>
-                                 {logged ? 'Logout' : 'Login'}
-                            </NavLink>
+        
+
 
 
                         </div>

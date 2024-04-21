@@ -803,8 +803,35 @@ img{
   border-radius: 1rem;;
 }
 
+
+.button-login{
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.user-name-mobile{
+  color: var(--green-color);
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.user-name-desk{
+  display: none;
+
+}
+
 @media (min-width: 768px){
     .info-target .price{
       font-size: 3rem;
+    }
+    .user-name-desk{
+      display: block;
+    }
+
+    .user-name-mobile{
+      display: none;
     }
 }
