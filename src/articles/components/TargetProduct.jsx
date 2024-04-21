@@ -1,19 +1,25 @@
+import { currencyFormatter } from "../helpers/currencyFormatter";
+
 
 
 const TargetProduct = ({id, name, infoAditional, price, category}) => {
 
 
-    const urlImage = `/public/imageProducts/${id}.avif`;
+    const urlImage = `/imageProducts/${id}.avif`;
+    const priceFormated = currencyFormatter({currency: 'MXN'}, price);
 
 
     return (
         <div className="target-contain">
-            <img src={urlImage} alt="name" />
+            <div className="contain-img-card">
+                <img src={urlImage} alt="name" />
+            </div>
+            
 
             <div className="info-target">
                 <h3>{name}</h3>
-                <p>{infoAditional}</p>
-                <p>{price}</p>
+                <p className="aditional">{infoAditional}</p>
+                <p className="price">{priceFormated}</p>
                 <button>Añadir</button>
             </div>
         </div>
