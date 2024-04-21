@@ -10,7 +10,7 @@ export const products = [
     },
     {
         id: 'hot-dog-sencillo',
-        name: 'Hot dof sencillo',
+        name: 'Hot dog sencillo',
         infoAditional: 'Incluye papas',
         price: 60,
         category: 'snacks',

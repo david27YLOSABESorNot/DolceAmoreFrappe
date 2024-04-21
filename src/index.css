@@ -34,6 +34,10 @@ a{
 
 }
 
+.margin-adjust{
+  padding-bottom: 40rem;
+}
+
 .contain{
   max-width: 110rem;
   width: 98%;
@@ -834,4 +838,18 @@ img{
     .user-name-mobile{
       display: none;
     }
+}
+
+
+
+.contain-buy-description{
+  margin-top: 10rem;
+}
+
+.heading-carrito{
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 4rem;
+  color: #413A3A;
+  font-family: var(--terciary-font)
 }
