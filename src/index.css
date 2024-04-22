@@ -853,3 +853,32 @@ img{
   color: #413A3A;
   font-family: var(--terciary-font)
 }
+
+.single-contain-carrito{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid;
+}
+
+.single-contain-carrito img{
+  width: 10rem;
+}
+
+.description-article h4{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.description-article p{
+  font-family: var(--terciary-font);
+  color: var(--green-color);
+  font-size: 3rem;
+}
+
+.cuantity, .toPay{
+  font-family: var(--terciary-font);
+  font-size: 2rem;
+  
+}

@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { UserContext } from "../../context/userContext";
 import { currencyFormatter } from "../helpers/currencyFormatter";
 
 
@@ -7,6 +9,9 @@ const TargetProduct = ({id, name, infoAditional, price, category}) => {
 
     const urlImage = `/imageProducts/${id}.avif`;
     const priceFormated = currencyFormatter({currency: 'MXN'}, price);
+    const {addProduct} = useContext(UserContext);
+
+
 
 
     return (
@@ -20,7 +25,7 @@ const TargetProduct = ({id, name, infoAditional, price, category}) => {
                 <h3>{name}</h3>
                 <p className="aditional">{infoAditional}</p>
                 <p className="price">{priceFormated}</p>
-                <button>Añadir</button>
+                <button onClick={() => addProduct({id, name, infoAditional, price, category})}>Añadir</button>
             </div>
         </div>
     )
