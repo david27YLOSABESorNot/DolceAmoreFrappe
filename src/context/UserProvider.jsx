@@ -21,6 +21,7 @@ export const UserProvider = ({children}) => {
 
     const addProduct = (product) => {
 
+        
         setAddArticle([...addArticle, product]);
     }
 

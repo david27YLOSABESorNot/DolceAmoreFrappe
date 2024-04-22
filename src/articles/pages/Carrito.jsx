@@ -8,7 +8,6 @@ export const Carrito = () => {
   const nameUser = infoUser.nombre;
 
 
-  console.log(addArticle.length);
 
   return (
     <div className={`contain contain-buy-description ${addArticle.length == 0 ? 'margin-adjust' : ''}`}>
