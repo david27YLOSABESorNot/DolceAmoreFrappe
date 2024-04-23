@@ -21,8 +21,20 @@ export const UserProvider = ({children}) => {
 
     const addProduct = (product) => {
 
+        addArticle.map( article => {
+            if(article.id === product.id){
+                article.cuantity == product.cuantity
+                return;
+            }else{
+
+                setAddArticle([...addArticle, product]);
+       
+            }
+
+        })
         
-        setAddArticle([...addArticle, product]);
+        
+        
     }
 
   

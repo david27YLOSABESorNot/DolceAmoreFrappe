@@ -907,3 +907,16 @@ img{
   font-size: 2rem;
 
 }
+
+.cuantity-form p{
+
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cuantity-form input{
+  margin-bottom: 1.5rem;
+  padding: .5rem;
+  border: none;
+  border-bottom: 1px solid black;
+}

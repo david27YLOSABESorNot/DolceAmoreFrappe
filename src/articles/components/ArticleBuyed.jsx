@@ -1,9 +1,11 @@
+import { currencyFormatter } from "../helpers/currencyFormatter";
 
 
-const ArticleBuyed = ({id, name, infoAditional, price, category}) => {
+
+const ArticleBuyed = ({id, name, price, cuantity}) => {
 
     let img = `/imageProducts/${id}.avif`;
-    
+    const priceFormated = currencyFormatter({currency: 'MXN'}, price);
 
     return (
         <div className="single-contain-carrito">
@@ -11,11 +13,11 @@ const ArticleBuyed = ({id, name, infoAditional, price, category}) => {
 
             <div className="description-article">
                 <h4>{name}</h4>
-                <p>{price}</p>
+                <p>{priceFormated}</p>
             </div>
 
             <div className="cuantity">
-                <p>4</p>
+                <p>{cuantity}</p>
             </div>
             <div className="toPay">
                 <p>$340</p>
