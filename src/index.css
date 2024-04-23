@@ -920,3 +920,27 @@ img{
   border: none;
   border-bottom: 1px solid black;
 }
+
+.total-pay{
+  font-size: 2.5rem;;
+  color: rgb(41, 40, 40);
+}
+
+.pay-section{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.total-pay span{
+  font-family: var(--secundary-font);
+  font-weight: bold;
+}
+
+.pay{
+  padding: 1rem .5rem;
+  font-size: 1.5rem;
+  background: none;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+}

@@ -7,10 +7,9 @@ import { useForm } from "../../hook/useForm";
 
 const TargetProduct = ({id, name, infoAditional, price}) => {
 
-
     
     const priceFormated = currencyFormatter({currency: 'MXN'}, price);
-    const {addProduct} = useContext(UserContext);
+    const {addProduct, setMessageAdd} = useContext(UserContext);
     const {onInputChange, cuantity} = useForm({ cuantity: 0})
     const urlImage = `/imageProducts/${id}.avif`;
     const [messageError, setMessageError] = useState('');
@@ -22,9 +21,15 @@ const TargetProduct = ({id, name, infoAditional, price}) => {
 
             return;
         }
-
+        const cuantityFormat = parseInt(cuantity)
         setMessageError('');
-        addProduct({id, name, infoAditional, price, cuantity})
+        setMessageAdd('Se ha agregado un producto al carrito')
+
+        setTimeout(() => {
+            setMessageAdd('');
+        }, 3000);
+        addProduct({id, name, infoAditional, price, cuantityFormat});
+        
     }
 
 

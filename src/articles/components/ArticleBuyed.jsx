@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import { currencyFormatter } from "../helpers/currencyFormatter";
+import { UserContext } from "../../context/userContext";
 
 
 
-const ArticleBuyed = ({id, name, price, cuantity}) => {
+const ArticleBuyed = ({id, name, price, cuantityFormat}) => {
 
+    const {calculateAmount} = useContext(UserContext);
     let img = `/imageProducts/${id}.avif`;
     const priceFormated = currencyFormatter({currency: 'MXN'}, price);
+    const amount = calculateAmount(price, cuantityFormat);
 
     return (
         <div className="single-contain-carrito">
@@ -17,10 +21,10 @@ const ArticleBuyed = ({id, name, price, cuantity}) => {
             </div>
 
             <div className="cuantity">
-                <p>{cuantity}</p>
+                <p>{cuantityFormat}</p>
             </div>
             <div className="toPay">
-                <p>$340</p>
+                <p>{amount}</p>
             </div>
 
 
@@ -28,4 +32,4 @@ const ArticleBuyed = ({id, name, price, cuantity}) => {
     )
 }
 
-export default ArticleBuyed
+export default ArticleBuyed;
