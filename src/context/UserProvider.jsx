@@ -8,11 +8,11 @@ export const UserProvider = ({children}) => {
     
     const [infoUser, setInfoUser] = useState(JSON.parse(localStorage.getItem('infoUser')) || {});
     const [logged, setLogged] = useState(JSON.parse(localStorage.getItem('logged')) || false);
-    const [addArticle, setAddArticle] = useState([]);
+    const [addArticle, setAddArticle] = useState(JSON.parse(localStorage.getItem('addArticle')) || []);
     const [messageAdd, setMessageAdd] = useState('');
 
     
-    //Implementamos el localStorage
+    //Implementamos el localStorage para no perder los datos al momento de recargar
 
     useEffect(() => {
         localStorage.setItem('infoUser', JSON.stringify(infoUser));
@@ -21,6 +21,10 @@ export const UserProvider = ({children}) => {
     useEffect(() => {
         localStorage.setItem('logged', JSON.stringify(logged));
     }, [logged]);
+
+    useEffect(() => {
+        localStorage.setItem('addArticle', JSON.stringify(addArticle));
+    }, [addArticle])
 
     const addProduct = (product) => {
 
@@ -39,7 +43,10 @@ export const UserProvider = ({children}) => {
         }
     }
 
+   
     const calculateAmount = (price, cuantityFormat) => {
+
+        
         
         const amount = price * cuantityFormat;
         return  currencyFormatter({currency: 'MXN'}, amount);
@@ -52,13 +59,25 @@ export const UserProvider = ({children}) => {
         return currencyFormatter({currency: 'MXN'}, total);
     }
 
+    const deleteProduct = (idProduct) => {
+
+
+        const deleted = addArticle.filter( article => article.id !== idProduct);
+
+        setAddArticle(deleted);
+
+    
+
+    
+    }
+
   
 
 
     
     return (
         <UserContext.Provider  
-            value={{setInfoUser, infoUser, setLogged, logged, addProduct, addArticle, calculateAmount, calculateTotalAmount, setMessageAdd, messageAdd}}>
+            value={{setInfoUser, infoUser, setLogged, logged, addProduct, addArticle, calculateAmount, calculateTotalAmount, setMessageAdd, messageAdd, deleteProduct}}>
             {
                 children
             }

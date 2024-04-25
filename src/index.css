@@ -861,26 +861,46 @@ img{
   align-items: center;
   margin-bottom: 3rem;
   border-bottom: 1px solid;
+  position: relative;
 }
 
 .single-contain-carrito img{
-  width: 10rem;
+  width: 6rem;
 }
 
 .description-article h4{
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .description-article p{
   font-family: var(--terciary-font);
   color: var(--green-color);
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .cuantity, .toPay{
   font-family: var(--terciary-font);
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+}
+
+@media(min-width: 768px){
+  .single-contain-carrito img{
+    width: 10rem;
+  }
+
+  .description-article h4{
+    font-size: 1.5rem;
+  }
+  
+  .description-article p{
+    font-size: 3rem;
+  }
+  .cuantity, .toPay{
+    font-size: 2.5rem;
+  
+  }
 
 }
 
@@ -922,7 +942,7 @@ img{
 }
 
 .total-pay{
-  font-size: 2.5rem;;
+  font-size: 1.5rem;;
   color: rgb(41, 40, 40);
 }
 
@@ -930,6 +950,7 @@ img{
   display: flex;
   align-items: center;
   gap: 2rem;
+  padding-bottom: 6rem;
 }
 
 .total-pay span{
@@ -937,10 +958,32 @@ img{
   font-weight: bold;
 }
 
+
+
 .pay{
   padding: 1rem .5rem;
   font-size: 1.5rem;
   background: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-bottom: 1px solid black;
+}
+
+@media (min-width: 768px){
+  .total-pay{
+    font-size: 2.5rem;
+  }
+
+  .pay{
+    font-size: 2rem;
+  }
+}
+
+.button-delete{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgb(166, 44, 44);
+  border: none;
+  color: white;
+  cursor: pointer;
 }

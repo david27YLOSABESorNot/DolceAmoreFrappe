@@ -13,6 +13,7 @@ const TargetProduct = ({id, name, infoAditional, price}) => {
     const {onInputChange, cuantity} = useForm({ cuantity: 0})
     const urlImage = `/imageProducts/${id}.avif`;
     const [messageError, setMessageError] = useState('');
+    const cuantityFormat = parseInt(cuantity);
 
     const validateProductAdd = () => {
         
@@ -21,14 +22,14 @@ const TargetProduct = ({id, name, infoAditional, price}) => {
 
             return;
         }
-        const cuantityFormat = parseInt(cuantity)
+
         setMessageError('');
+        addProduct({id, name, infoAditional, price, cuantityFormat})
         setMessageAdd('Se ha agregado un producto al carrito')
 
         setTimeout(() => {
-            setMessageAdd('');
+            setMessageAdd('')
         }, 3000);
-        addProduct({id, name, infoAditional, price, cuantityFormat});
         
     }
 

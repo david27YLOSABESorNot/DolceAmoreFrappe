@@ -6,10 +6,13 @@ import { UserContext } from "../../context/userContext";
 
 const ArticleBuyed = ({id, name, price, cuantityFormat}) => {
 
-    const {calculateAmount} = useContext(UserContext);
+    const {calculateAmount, deleteProduct} = useContext(UserContext);
     let img = `/imageProducts/${id}.avif`;
     const priceFormated = currencyFormatter({currency: 'MXN'}, price);
     const amount = calculateAmount(price, cuantityFormat);
+
+
+    
 
     return (
         <div className="single-contain-carrito">
@@ -26,7 +29,8 @@ const ArticleBuyed = ({id, name, price, cuantityFormat}) => {
             <div className="toPay">
                 <p>{amount}</p>
             </div>
-
+            <button onClick={() => deleteProduct(id)}  className="button-delete" >X</button>
+        
 
         </div>
     )
