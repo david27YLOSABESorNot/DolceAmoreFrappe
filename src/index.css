@@ -451,10 +451,12 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
 
+.shadow:hover{
+  transition: .3s ease-in-out;;
+  background: none;
+}
 
 
 
@@ -786,7 +788,7 @@ img{
   margin-bottom: 1rem;
 }
 .info-target .aditional{
-  font-weight: bold;
+  font-style: italic;
   font-size: 2rem;;
 }
 
@@ -936,7 +938,7 @@ img{
 
 .cuantity-form input{
   margin-bottom: 1.5rem;
-  padding: .5rem;
+  padding: 1rem;
   border: none;
   border-bottom: 1px solid black;
 }
